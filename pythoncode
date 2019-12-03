@@ -3,7 +3,7 @@ print("Type of connection\n")
 print("1.Domestic\n")
 print("2.Commercial\n")
  
-c= input('Enter input
+c= input('Enter input \n')
          
 while 1:
   units = int(input("Enter unit in meter:")) 
