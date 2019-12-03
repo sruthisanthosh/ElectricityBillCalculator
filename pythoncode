@@ -1,0 +1,66 @@
+print("ELECTRICITY BILL\n")
+print("Type of connection\n")
+print("1.Domestic\n")
+print("2.Commercial\n")
+ 
+c= input('Enter input
+         
+while 1:
+  units = int(input("Enter unit in meter:")) 
+  if(units<=50):
+    bill=units*2.9 
+  elif units<=100:
+    bill=50*2.9+(units-50)*3.4
+  elif units<=150:
+     bill=50*2.9+50*3.4+(units-100)*4.5
+  elif units<=200:
+     bill=50*2.9+50*3.4+50*4.5+(units-150)*6.
+  elif units<=250: 
+     bill=50*2.9+50*3.4+50*4.5+50*6.1+(units-200)*7.3
+  elif units>250 and units<=300 :
+     bill=units*5.5;
+  elif units>300 and units<=350 : 
+     bill=units*6.2;
+  elif units>350 and units<=400 : 
+     bill=units*6.5;
+  elif units>400 and units<=500 : 
+      bill=units*6.7; 
+  elif units>500 : 
+      bill=units*7.5;
+      
+print("Phase\n")
+print("1.Single \n")
+print("2.Three \n")
+ch =input('Enter phase:')               
+if ch==1:                                      
+      amt=(bill*2)*1.1+60+12
+      print("Bimonthly bill amount to be paid:Rs ")
+      print(amt)
+elif ch==2:
+      amt=(bill*2)*1.1+160+30
+      print("Bimonthly bill amount to be paid:Rs ")
+      print(amt)
+ 
+while 2:
+    units = int(input("Enter unit in meter:"))
+    if units>0 and units<=100 : 
+                       bill=units*6
+    elif units>100 and units<=200 : 
+                       bill=units*6.7
+    elif units>200 and units<=300: 
+                       bill=units*7.4
+    elif units>300 and units<=50: 
+                         bill=units*8                                                                                                                   
+    elif units>500: 
+                       bill=units*9.3
+L = int(input("Enter connected load:"))                       
+                       
+if ch==1:
+       
+        amt=(bill*2)*1.1+(L*120)+12
+elif ch==2:
+      
+       amt=(bill*2)*1.1+(L*240)+30                
+print("Bill amount to be paid:Rs ")
+print(amt)
+
